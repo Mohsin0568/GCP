@@ -1,5 +1,6 @@
 runtime: java
 env: flex
+service: newsapp
 runtime_config:
   jdk: openjdk8
 handlers:
