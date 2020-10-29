@@ -1,4 +1,5 @@
 # GCP
+# run below commands in gcloud cloud shell
 
 gcloud config set project computeproject-293903
 
