@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kubectl-news-service
+  labels:
+    app: kubectl-news
+    tier: kubectl-news-backend
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: http-server
+  selector:
+    app: kubectl-news
+    tier: kubectl-news-backend
