@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: news
+  labels:
+    app: kubectl-news
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: kubectl-news
+        tier: kubectl-news-backend
+    spec:
+      containers:
+      - name: news
+        image: gcr.io/computeproject-293903/news
+        imagePullPolicy: Always
+        env:
+          - name: GCLOUD_PROJECT
+            value: computeproject-293903
