@@ -6,6 +6,10 @@ metadata:
     app: kubectl-news
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      app: kubectl-news
+      tier: kubectl-news-backend
   template:
     metadata:
       labels:
@@ -16,6 +20,9 @@ spec:
       - name: news
         image: gcr.io/computeproject-293903/news
         imagePullPolicy: Always
+        ports:
+          - name: http-server
+            containerPort: 8080
         env:
           - name: GCLOUD_PROJECT
             value: computeproject-293903
