@@ -21,7 +21,7 @@ http://[ip_address:port]/news/feeds/test
 
 
 
-#Building and pushing docker image using docker commands
+# Building and pushing docker image using docker commands
 
 ### Run below command to build docker image
 docker build -t gcr.io/[gpc-project-id]/news:1.0 .
