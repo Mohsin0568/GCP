@@ -18,3 +18,25 @@ kubectl create -f deployment-service.yaml
 
 # Copy ipaddress from services section and enter below url in browser
 http://[ip_address:port]/news/feeds/test
+
+
+
+#Building and pushing docker image using docker commands
+
+## Run below command to build docker image
+docker build -t gcr.io/[gpc-project-id]/news:1.0 .
+
+### Create tag for docker image
+docker tag [image_id] gcr.io/[gpc-project-id]/news:1.0
+
+run docker image list to find image id.
+
+## Enable docker container registry api from console.
+
+### run below command to authorize gcp
+gcloud auth configure-docker
+
+### run below command to push docker image to google container registry api.
+docker push gcr.io/[gpc-project-id]/news:1.0
+
+Verify image by navigating to Container registry page in console.
