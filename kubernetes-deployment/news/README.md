@@ -22,6 +22,9 @@ http://[ip_address:port]/news/feeds/test
 ### Run below command to scale pods
 kubectl scale deployment news-service --replicas=3
 
+### Run below command to get all the avaialble pods running
+kubectl get pods
+
 Above service is running in 1 node with 3 pods.
 
 ### Run below command to scale number of nodes in a cluster.
