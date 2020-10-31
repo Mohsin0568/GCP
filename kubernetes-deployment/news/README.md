@@ -19,6 +19,14 @@ kubectl create -f deployment-service.yaml
 ### Copy ipaddress from services section and enter below url in browser
 http://[ip_address:port]/news/feeds/test
 
+### Run below command to scale pods
+kubectl scale deployment news-service --replicas=3
+
+Above service is running in 1 node with 3 pods.
+
+### Run below command to scale number of nodes in a cluster.
+gcloud container clusters resize [cluster-name] --num-nodes 2
+
 
 
 # Building and pushing docker image using docker commands
@@ -40,3 +48,13 @@ gcloud auth configure-docker
 docker push gcr.io/[gpc-project-id]/news:1.0
 
 Verify image by navigating to Container registry page in console.
+
+
+# Pushing updates
+
+Update project code and build project using maven.
+
+Create and push new image to the repository by updating tag to newer version (update tag in Dockerfile).
+
+### update deployment.yaml to pull latest image and run below command
+kubectl apply -f deployment.yaml
