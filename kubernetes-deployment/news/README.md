@@ -8,7 +8,7 @@
 ### Run below command to create docker image in gcp container registry, make sure our command terminal is in directory where Dockerfile is present.
 ```gcloud builds submit -t gcr.io/$DEVSHELL_PROJECT_ID/news . ```
 
-###After running above command, navigate to GCP Container registry and verify the docker image.
+### After running above command, navigate to GCP Container registry and verify the docker image.
 
 ### Execute kubctl deployment
 ```kubectl create -f deployment.yaml```
