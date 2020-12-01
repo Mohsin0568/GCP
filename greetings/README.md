@@ -1,2 +1,2 @@
-# Spring Boot App With Sping secutiry and config server
+# Spring Boot App With Sping security and config server
 
