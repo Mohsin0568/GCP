@@ -7,10 +7,9 @@ First run config server application, uncomment property to read property files f
 
 Now comment property which we have uncommented property in above step and run above url's to test properties from git repo.
 
-
 Now run frontend and backend application and check if properties are loaded from config server. Run backend app with 'dev' profile.
 
-Now run application on App Engine using below steps.
+**Now run application on App Engine using below steps.**
 
 - Create default app in app engine before deploying app.
    ``` gcloud app create --region=us-central ```
